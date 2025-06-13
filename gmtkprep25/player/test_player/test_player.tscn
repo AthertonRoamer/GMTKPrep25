@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://bj1vaddkg8t4a"]
+
+[ext_resource type="Script" uid="uid://bxsmnrcvjn3rk" path="res://player/test_player/test_player.gd" id="1_e576e"]
+[ext_resource type="Shader" uid="uid://cryf51ccig0sy" path="res://player/test_player/test_player.gdshader" id="1_g15jn"]
+[ext_resource type="Texture2D" uid="uid://cx2g1hfl62bcr" path="res://icon.svg" id="2_e576e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ohxiy"]
+shader = ExtResource("1_g15jn")
+shader_parameter/color = Vector3(0, 0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuaxi"]
+size = Vector2(64, 64)
+
+[node name="TestPlayer" type="CharacterBody2D"]
+script = ExtResource("1_e576e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ohxiy")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_e576e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xuaxi")
