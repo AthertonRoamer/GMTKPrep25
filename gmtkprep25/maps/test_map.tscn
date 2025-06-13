@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=4 uid="uid://dg7ekwmmccyj4"]
+
+[ext_resource type="Texture2D" uid="uid://cx2g1hfl62bcr" path="res://icon.svg" id="1_6slyc"]
+[ext_resource type="PackedScene" uid="uid://bj1vaddkg8t4a" path="res://player/test_player/test_player.tscn" id="2_b71ab"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b71ab"]
+texture = ExtResource("1_6slyc")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_pwco0"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_b71ab")
+
+[node name="TestMap" type="Node2D"]
+
+[node name="Layer0" type="TileMapLayer" parent="."]
+use_parent_material = true
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAAAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAHAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAJAAcAAAAAAAAAAAAKAAcAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAD//wcAAAAAAAAAAAADAAYAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_pwco0")
+
+[node name="TestPlayer" parent="." instance=ExtResource("2_b71ab")]
+position = Vector2(436, 215)
