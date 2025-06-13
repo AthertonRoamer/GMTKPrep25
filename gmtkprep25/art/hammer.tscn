@@ -1,0 +1,118 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4gheop4cx2fy"]
+
+[ext_resource type="Texture2D" uid="uid://c1d4mdvmxqvao" path="res://art/gmtk25_art2.png" id="1_63pn6"]
+
+[node name="hammer" type="Node2D"]
+position = Vector2(16, 34)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(1, 0)
+offset = Vector2(-1704, -633)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1678, 478, 1538, 554, 1682, 790, 1806, 536)
+uv = PackedVector2Array(1639.68, 459.604, 1358, 592.471, 1604.24, 847.576, 2130.4, 539.325)
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+position = Vector2(-22, -159)
+offset = Vector2(-1725, -1216)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1752, 1161, 1685, 1161, 1670, 1198, 1712, 1299, 1847, 1208)
+uv = PackedVector2Array(1815.3, 1070.69, 1583.05, 1111.49, 1441.82, 1246.44, 1680.34, 1387.67, 2006.74, 1208.78)
+
+[node name="Polygon2D6" type="Polygon2D" parent="."]
+position = Vector2(-3, -194)
+rotation = -1.44327
+offset = Vector2(-1725, -1216)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1731, 1234, 1694, 1248, 1691, 1245, 1712, 1299, 1806, 1215)
+uv = PackedVector2Array(1815.3, 1070.69, 1583.05, 1111.49, 1441.82, 1246.44, 1680.34, 1387.67, 2006.74, 1208.78)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(-21, -233)
+offset = Vector2(-1408, -1016)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1395, 1041, 1277, 1080, 1407, 1171)
+uv = PackedVector2Array(1387.68, 798.188, 1178.31, 1091.3, 1468.21, 1242.69)
+
+[node name="Polygon2D4" type="Polygon2D" parent="."]
+position = Vector2(-97, -285)
+offset = Vector2(-1408, -1016)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1416, 1041, 1371, 1146, 1419, 1170)
+uv = PackedVector2Array(1387.68, 798.188, 1178.31, 1091.3, 1468.21, 1242.69)
+
+[node name="Polygon2D11" type="Polygon2D" parent="."]
+position = Vector2(-97, -285)
+offset = Vector2(-1408, -1016)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1416, 1041, 1371, 1146, 1419, 1170)
+uv = PackedVector2Array(1387.68, 798.188, 1178.31, 1091.3, 1468.21, 1242.69)
+
+[node name="Polygon2D5" type="Polygon2D" parent="."]
+position = Vector2(18, -151)
+rotation = -0.265068
+scale = Vector2(0.0974555, 0.0742527)
+offset = Vector2(-1232, -817)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1174.75, 678.057, 1096.8, 942.02, 1420.99, 802.067)
+uv = PackedVector2Array(1174.75, 678.057, 1096.8, 942.02, 1420.99, 802.067)
+
+[node name="Polygon2D7" type="Polygon2D" parent="."]
+position = Vector2(-33, -151)
+rotation = 0.918178
+scale = Vector2(0.0974555, 0.0742527)
+offset = Vector2(-1232, -817)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1174.75, 678.057, 1096.8, 942.02, 1420.99, 802.067)
+uv = PackedVector2Array(1174.75, 678.057, 1096.8, 942.02, 1420.99, 802.067)
+
+[node name="hammer" type="Node2D" parent="."]
+position = Vector2(168, -61)
+rotation = 0.57446
+scale = Vector2(1.40627, 1)
+
+[node name="Polygon2D9" type="Polygon2D" parent="hammer"]
+modulate = Color(0.716296, 0.716296, 0.716296, 1)
+scale = Vector2(1, 1)
+offset = Vector2(-1403, -1106)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1392.9, 926.412, 1372.61, 1392.56, 1408.74, 1397.11)
+uv = PackedVector2Array(1387.68, 798.188, 1178.31, 1091.3, 1468.21, 1242.69)
+
+[node name="Polygon2D10" type="Polygon2D" parent="hammer"]
+modulate = Color(0.716296, 0.716296, 0.716296, 1)
+position = Vector2(-11.0164, 82.96)
+rotation = -3.08673
+scale = Vector2(1.00074, 0.999624)
+skew = -0.0270977
+offset = Vector2(-1403, -1106)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1392.9, 926.412, 1372.61, 1392.56, 1408.74, 1397.11)
+uv = PackedVector2Array(1387.68, 798.188, 1178.31, 1091.3, 1468.21, 1242.69)
+
+[node name="Polygon2D12" type="Polygon2D" parent="hammer"]
+position = Vector2(-14.8439, -248.681)
+rotation = -1.61114
+scale = Vector2(0.999206, 0.712216)
+skew = -0.0393173
+offset = Vector2(-365, -1002)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(264, 819, 107, 1113, 240.35, 1072.3, 339, 1101, 420, 1005)
+uv = PackedVector2Array(320.19, 775.81, -28.6304, 1085.66, 413.729, 1222.07, 688.498, 1165.55, 606.652, 1001.86)
+
+[node name="Polygon2D" type="Polygon2D" parent="hammer"]
+position = Vector2(111.887, -69.0455)
+scale = Vector2(0.925208, 1)
+offset = Vector2(-1631.09, -959.938)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1561.57, 801.055, 1513.75, 888.972, 1547.45, 1035.79)
+uv = PackedVector2Array(1625.73, 824.254, 1501.73, 1061.25, 1818.73, 1072.25)
+
+[node name="Polygon2D2" type="Polygon2D" parent="hammer"]
+position = Vector2(-39.528, -176.054)
+rotation = -3.27032
+scale = Vector2(0.925208, 1)
+offset = Vector2(-1631.09, -959.938)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1581.74, 793.044, 1519.43, 918.204, 1536.5, 1017.85)
+uv = PackedVector2Array(1625.73, 824.254, 1501.73, 1061.25, 1818.73, 1072.25)

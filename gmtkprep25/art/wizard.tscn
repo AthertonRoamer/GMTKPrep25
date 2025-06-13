@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=3 uid="uid://bifokxpmfurvc"]
+
+[ext_resource type="Texture2D" uid="uid://c1d4mdvmxqvao" path="res://art/gmtk25_art2.png" id="1_fqrr0"]
+
+[node name="wizard" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-17, 16)
+rotation = 0.102614
+offset = Vector2(-364, -1625)
+texture = ExtResource("1_fqrr0")
+polygon = PackedVector2Array(313.43, 1212.01, 237.57, 1773.73, 391.491, 1735.77, 546.948, 1712.72)
+uv = PackedVector2Array(326.394, 1336.56, 153.78, 1695.59, 378.178, 1902.73, 664.717, 1716.31)
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+position = Vector2(-96, -268)
+offset = Vector2(-1257, -1894)
+texture = ExtResource("1_fqrr0")
+polygon = PackedVector2Array(1331, 1745, 1480, 1959, 1310, 2062, 1278, 2041)
+uv = PackedVector2Array(1256.29, 1681.92, 1105.85, 1946.48, 1248.51, 2068.39, 1326.32, 2050.23)
+
+[node name="Polygon2D4" type="Polygon2D" parent="."]
+position = Vector2(33, -243)
+scale = Vector2(0.137189, 0.156746)
+offset = Vector2(-965, -1916)
+texture = ExtResource("1_fqrr0")
+polygon = PackedVector2Array(982.623, 1783.11, 811.136, 1950.31, 851.864, 2008.19, 1098.38, 1961.03)
+uv = PackedVector2Array(982.623, 1783.11, 811.136, 1950.31, 851.864, 2008.19, 1098.38, 1961.03)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+modulate = Color(0.509286, 0.509286, 0.509286, 1)
+position = Vector2(-65, -276)
+offset = Vector2(-1257, -1894)
+texture = ExtResource("1_fqrr0")
+polygon = PackedVector2Array(1321, 1748, 1167, 1986, 1310, 2062, 1326.32, 2050.23)
+uv = PackedVector2Array(1256.29, 1681.92, 1105.85, 1946.48, 1248.51, 2068.39, 1326.32, 2050.23)
+
+[node name="Polygon2D5" type="Polygon2D" parent="."]
+modulate = Color(0.577008, 0.577008, 0.577008, 1)
+position = Vector2(-19, -241)
+rotation = 1.48416
+scale = Vector2(0.137189, 0.156746)
+offset = Vector2(-965, -1916)
+texture = ExtResource("1_fqrr0")
+polygon = PackedVector2Array(982.623, 1783.11, 811.136, 1950.31, 851.864, 2008.19, 1098.38, 1961.03)
+uv = PackedVector2Array(982.623, 1783.11, 811.136, 1950.31, 851.864, 2008.19, 1098.38, 1961.03)
+
+[node name="staff" type="Node2D" parent="."]
+position = Vector2(99, 45)
+rotation = -1.25128
+
+[node name="Polygon2D" type="Polygon2D" parent="staff"]
+modulate = Color(0.408329, 0.408329, 0.408329, 1)
+position = Vector2(141.853, -44.1479)
+rotation = 1.51392
+scale = Vector2(1.56293, 1)
+offset = Vector2(-1221.54, -1908.31)
+texture = ExtResource("1_fqrr0")
+polygon = PackedVector2Array(1257.39, 1690.13, 1214, 2121.2, 1238.98, 2116.21)
+uv = PackedVector2Array(1257.39, 1690.13, 1106.95, 1941.72, 1283.32, 2089.57)
+
+[node name="Polygon2D2" type="Polygon2D" parent="staff"]
+modulate = Color(0.408329, 0.408329, 0.408329, 1)
+position = Vector2(8.99998, 4)
+rotation = -1.60314
+offset = Vector2(-1221.54, -1908.31)
+texture = ExtResource("1_fqrr0")
+polygon = PackedVector2Array(1241.73, 1831.65, 1195.33, 2286.95, 1232.19, 2245.82)
+uv = PackedVector2Array(1257.39, 1690.13, 1106.95, 1941.72, 1283.32, 2089.57)
+
+[node name="Polygon2D3" type="Polygon2D" parent="staff"]
+modulate = Color(0.621524, 0.621524, 0.621524, 1)
+position = Vector2(332.728, -54.0553)
+rotation = -2.19929
+scale = Vector2(0.993871, 0.994814)
+offset = Vector2(-963.701, -1904.97)
+texture = ExtResource("1_fqrr0")
+polygon = PackedVector2Array(952.249, 1830, 850.653, 1948.06, 951.137, 1917.84)
+uv = PackedVector2Array(981.786, 1779.29, 788.686, 1983.02, 1111.11, 1988.34)
+
+[node name="Polygon2D4" type="Polygon2D" parent="staff"]
+position = Vector2(241.972, -54.5747)
+rotation = -1.88823
+scale = Vector2(0.993871, 0.994814)
+offset = Vector2(-963.701, -1904.97)
+texture = ExtResource("1_fqrr0")
+polygon = PackedVector2Array(908.4, 1923.18, 852.113, 1951.44, 852.608, 2096.32)
+uv = PackedVector2Array(981.786, 1779.29, 788.686, 1983.02, 1111.11, 1988.34)
