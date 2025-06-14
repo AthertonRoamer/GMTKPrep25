@@ -1,6 +1,10 @@
 class_name Player
 extends CharacterBody2D
 
+
+@export var keyboard_input : bool = false
+@export var controller_input : bool = true
+var device_id : int = -1
 #region physics variables
 @export_group("Walk")
 @export var walk_max_speed : float = 250
@@ -144,14 +148,28 @@ func can_jump() -> bool:
 	
 	
 func get_input() -> void:
-	if Input.is_action_just_pressed("jump"):
-		jump()
-	if Input.is_action_just_released("jump"):
-		quit_jumping()
-	if Input.is_action_pressed("walk_left"):
-		walk_left()
-	if Input.is_action_pressed("walk_right"):
-		walk_right()
+	if keyboard_input:
+		if Input.is_action_just_pressed("jump"):
+			jump()
+		if Input.is_action_just_released("jump"):
+			quit_jumping()
+		if Input.is_action_pressed("walk_left"):
+			walk_left()
+		if Input.is_action_pressed("walk_right"):
+			walk_right()
+	if controller_input:
+		if Input.get_joy_axis(device_id, JOY_AXIS_LEFT_X) > 0.2:
+			walk_right()
+		elif Input.get_joy_axis(device_id, JOY_AXIS_LEFT_X) < -0.2:
+			walk_left()
+			
+			
+func _input(event : InputEvent) -> void:
+	if event.device == device_id and controller_input:
+		if event.is_action_pressed("jump"):
+			jump()
+		if event.is_action_released("jump"):
+			quit_jumping()
 	
 
 func take_damage(dmg : float) -> void:

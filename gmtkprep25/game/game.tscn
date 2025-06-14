@@ -1,6 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://csvtknxc2a23t"]
+[gd_scene load_steps=6 format=3 uid="uid://csvtknxc2a23t"]
 
 [ext_resource type="Script" uid="uid://cdqiyn1lwxg55" path="res://game/game.gd" id="1_l1rk1"]
+[ext_resource type="Script" uid="uid://hbqc0qu55pey" path="res://game/player_manager.gd" id="2_vasa2"]
+[ext_resource type="PackedScene" uid="uid://bj1vaddkg8t4a" path="res://player/test_player/test_player.tscn" id="3_h7iqs"]
+[ext_resource type="Script" uid="uid://cghp3n1ob8rh" path="res://game/camera_2d.gd" id="4_4fuuu"]
+[ext_resource type="Texture2D" uid="uid://cx2g1hfl62bcr" path="res://icon.svg" id="5_dxrkv"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_l1rk1")
+
+[node name="PlayerManager" type="Node2D" parent="."]
+script = ExtResource("2_vasa2")
+players_to_spawn = {
+ExtResource("3_h7iqs"): 3
+}
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player_manager")]
+position = Vector2(576, 324)
+position_smoothing_enabled = true
+script = ExtResource("4_4fuuu")
+player_manager = NodePath("../PlayerManager")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_dxrkv")
