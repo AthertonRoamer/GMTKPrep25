@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://n723ru2gtx5i"]
+[gd_scene load_steps=4 format=3 uid="uid://n723ru2gtx5i"]
 
+[ext_resource type="PackedScene" uid="uid://dor6iks60feuh" path="res://maps/platforms/platform_02.tscn" id="1_b71ab"]
 [ext_resource type="Script" uid="uid://b60ur2mhqmr8s" path="res://maps/map.gd" id="1_pwco0"]
 
 [sub_resource type="Environment" id="Environment_42yok"]
@@ -8,6 +9,18 @@ glow_enabled = true
 
 [node name="test_map" type="Node2D"]
 script = ExtResource("1_pwco0")
+
+[node name="Spawn1" type="Node2D" parent="."]
+position = Vector2(2384, 204)
+
+[node name="Spawn2" type="Node2D" parent="."]
+position = Vector2(280, 267)
+
+[node name="Spawn3" type="Node2D" parent="."]
+position = Vector2(926, 416)
+
+[node name="Spawn4" type="Node2D" parent="."]
+position = Vector2(1860, 199)
 
 [node name="graphics" type="Node2D" parent="."]
 
@@ -21,16 +34,14 @@ offset_right = 20332.0
 offset_bottom = 15874.0
 color = Color(0.0295066, 0.0295066, 0.0295066, 1)
 
-[node name="spawns" type="Node2D" parent="."]
+[node name="Platform02" parent="." instance=ExtResource("1_b71ab")]
+position = Vector2(129, 411)
+scale = Vector2(0.380546, 0.248097)
 
-[node name="Spawn1" type="Node2D" parent="spawns"]
-position = Vector2(2384, 204)
+[node name="Platform03" parent="." instance=ExtResource("1_b71ab")]
+position = Vector2(932, 540)
+scale = Vector2(-0.259453, 0.248097)
 
-[node name="Spawn2" type="Node2D" parent="spawns"]
-position = Vector2(280, 267)
-
-[node name="Spawn3" type="Node2D" parent="spawns"]
-position = Vector2(926, 416)
-
-[node name="Spawn4" type="Node2D" parent="spawns"]
-position = Vector2(1860, 199)
+[node name="Platform04" parent="." instance=ExtResource("1_b71ab")]
+position = Vector2(2842, 433)
+scale = Vector2(-1.87502, 0.432347)
