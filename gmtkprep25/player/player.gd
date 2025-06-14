@@ -40,6 +40,8 @@ var current_friction : float = ground_friction
 @export var gravity_accel : float = 2000
 #endregion 
 
+var dash_this_frame : bool = false
+
 var starting_health : float = 100
 var health = starting_health:
 	set(v):
@@ -79,6 +81,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		if not (dynamic_jumping and jumping):
 			velocity.y += gravity_accel * delta
+			
+	if dash_this_frame:
+		dash_this_frame = false
+		process_dash()
 	
 	#apply friction
 	if walk_direction == 0:
@@ -151,6 +157,10 @@ func can_jump() -> bool:
 	
 
 func dash():
+	dash_this_frame = true
+	
+	
+func process_dash() -> void:
 	pass
 
 func get_input() -> void:

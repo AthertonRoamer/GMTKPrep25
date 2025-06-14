@@ -6,6 +6,7 @@ extends Player
 @export var dash_power = 650
 var dash_direction
 
+
 var dashing = false
 var anim_jumping = false
 
@@ -29,7 +30,7 @@ func handle_visuals():
 	if walk_direction == 0:
 		animate("idle")
 
-func dash():
+func process_dash():
 	dashing = true
 	animate("dash")
 	dash_direction = walk_direction

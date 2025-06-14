@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://csvtknxc2a23t"]
+[gd_scene load_steps=7 format=3 uid="uid://csvtknxc2a23t"]
 
 [ext_resource type="Script" uid="uid://cdqiyn1lwxg55" path="res://game/game.gd" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://hbqc0qu55pey" path="res://game/player_manager.gd" id="2_vasa2"]
-[ext_resource type="PackedScene" uid="uid://bj1vaddkg8t4a" path="res://player/test_player/test_player.tscn" id="3_h7iqs"]
 [ext_resource type="Script" uid="uid://cghp3n1ob8rh" path="res://game/camera_2d.gd" id="4_4fuuu"]
 [ext_resource type="PackedScene" uid="uid://bv7mmxv5oflqa" path="res://player/wizard/wizard.tscn" id="4_u5opy"]
 [ext_resource type="Texture2D" uid="uid://cx2g1hfl62bcr" path="res://icon.svg" id="5_dxrkv"]
@@ -16,7 +15,6 @@ script = ExtResource("1_l1rk1")
 [node name="PlayerManager" type="Node2D" parent="."]
 script = ExtResource("2_vasa2")
 players_to_spawn = {
-ExtResource("3_h7iqs"): 1,
 ExtResource("4_u5opy"): 1,
 ExtResource("5_y36n6"): 1
 }
