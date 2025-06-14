@@ -179,6 +179,8 @@ func _input(event : InputEvent) -> void:
 			jump()
 		if event.is_action_released("jump"):
 			quit_jumping()
+		if event.is_action_pressed("dash"):
+			dash()
 
 	
 

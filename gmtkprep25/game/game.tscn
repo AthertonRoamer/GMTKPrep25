@@ -28,6 +28,7 @@ script = ExtResource("4_4fuuu")
 player_manager = NodePath("../PlayerManager")
 
 [node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+visible = false
 modulate = Color(0, 0, 0, 1)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_dxrkv")
