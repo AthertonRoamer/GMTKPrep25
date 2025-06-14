@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://cumqqkee8lgow"]
+
+[ext_resource type="Texture2D" uid="uid://ckhkrt180he6v" path="res://art/gmtk25_art.png" id="1_5xrkt"]
+
+[node name="platform_01" type="StaticBody2D"]
+
+[node name="rock1" type="Polygon2D" parent="."]
+texture_filter = 1
+position = Vector2(141, 103)
+offset = Vector2(-470, -440)
+texture = ExtResource("1_5xrkt")
+polygon = PackedVector2Array(262, 267, 661, 271, 865.108, 471.439, 850.936, 533.443, 447.019, 772.604, -15.3581, 459.038)
+uv = PackedVector2Array(423.989, 120.67, 664.922, 198.618, 865.108, 471.439, 850.936, 533.443, 447.019, 772.604, -15.3581, 459.038)
+
+[node name="rock2" type="Polygon2D" parent="."]
+texture_filter = 1
+position = Vector2(771, 186)
+offset = Vector2(-470, -440)
+texture = ExtResource("1_5xrkt")
+polygon = PackedVector2Array(303, 201, 664.922, 198.618, 865.108, 471.439, 850.936, 533.443, 216, 534, 403, 392)
+uv = PackedVector2Array(423.989, 120.67, 664.922, 198.618, 865.108, 471.439, 850.936, 533.443, 447.019, 772.604, -15.3581, 459.038)
+
+[node name="rock3" type="Polygon2D" parent="."]
+texture_filter = 1
+position = Vector2(1144, 17)
+rotation = 0.765932
+offset = Vector2(-1069.51, -413.039)
+texture = ExtResource("1_5xrkt")
+polygon = PackedVector2Array(1116.84, 280.781, 980.858, 322.416, 859.558, 530.681, 1269.83, 589.852, 1264.18, 452.678)
+uv = PackedVector2Array(1116.84, 280.781, 908.112, 371.641, 861.455, 506.703, 1163.5, 514.07, 1264.18, 452.678)
+
+[node name="rock4" type="Polygon2D" parent="."]
+texture_filter = 1
+position = Vector2(501, 46)
+offset = Vector2(-470, -440)
+texture = ExtResource("1_5xrkt")
+polygon = PackedVector2Array(284, 328, 638, 328, 786, 552, 770, 582, 548, 692, 107, 537)
+uv = PackedVector2Array(423.989, 120.67, 664.922, 198.618, 865.108, 471.439, 850.936, 533.443, 447.019, 772.604, -15.3581, 459.038)
+
+[node name="rock5" type="Polygon2D" parent="."]
+texture_filter = 1
+position = Vector2(1318, 87)
+offset = Vector2(-470, -440)
+texture = ExtResource("1_5xrkt")
+polygon = PackedVector2Array(284, 328, 638, 328, 786, 552, 770, 582, 548, 692, 267, 585)
+uv = PackedVector2Array(423.989, 120.67, 664.922, 198.618, 865.108, 471.439, 850.936, 533.443, 447.019, 772.604, -15.3581, 459.038)

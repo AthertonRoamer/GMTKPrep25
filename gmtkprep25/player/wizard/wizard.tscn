@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bv7mmxv5oflqa"]
 
-[ext_resource type="Script" path="res://wizard.gd" id="1_nqr4n"]
-[ext_resource type="Texture2D" uid="uid://b4e11f4y0m10k" path="res://art/map_art.png" id="2_x548p"]
+[ext_resource type="Script" uid="uid://rq1uknbocc74" path="res://wizard.gd" id="1_nqr4n"]
+[ext_resource type="Texture2D" uid="uid://c1d4mdvmxqvao" path="res://art/gmtk25_art2.png" id="2_x548p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x548p"]
 radius = 31.0
