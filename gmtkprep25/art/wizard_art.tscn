@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://c1d4mdvmxqvao" path="res://art/gmtk25_art2.png" id="1_fqrr0"]
 
-[node name="wizard" type="Node2D"]
+[node name="wizard_art" type="Node2D"]
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="body" type="Polygon2D" parent="."]
 position = Vector2(-17, 16)
 rotation = 0.102614
 offset = Vector2(-364, -1625)
@@ -12,14 +12,16 @@ texture = ExtResource("1_fqrr0")
 polygon = PackedVector2Array(313.43, 1212.01, 237.57, 1773.73, 391.491, 1735.77, 546.948, 1712.72)
 uv = PackedVector2Array(326.394, 1336.56, 153.78, 1695.59, 378.178, 1902.73, 664.717, 1716.31)
 
-[node name="Polygon2D3" type="Polygon2D" parent="."]
+[node name="head" type="Node2D" parent="."]
+
+[node name="Polygon2D3" type="Polygon2D" parent="head"]
 position = Vector2(-96, -268)
 offset = Vector2(-1257, -1894)
 texture = ExtResource("1_fqrr0")
 polygon = PackedVector2Array(1331, 1745, 1480, 1959, 1310, 2062, 1278, 2041)
 uv = PackedVector2Array(1256.29, 1681.92, 1105.85, 1946.48, 1248.51, 2068.39, 1326.32, 2050.23)
 
-[node name="Polygon2D4" type="Polygon2D" parent="."]
+[node name="Polygon2D4" type="Polygon2D" parent="head"]
 position = Vector2(33, -243)
 scale = Vector2(0.137189, 0.156746)
 offset = Vector2(-965, -1916)
@@ -27,7 +29,7 @@ texture = ExtResource("1_fqrr0")
 polygon = PackedVector2Array(982.623, 1783.11, 811.136, 1950.31, 851.864, 2008.19, 1098.38, 1961.03)
 uv = PackedVector2Array(982.623, 1783.11, 811.136, 1950.31, 851.864, 2008.19, 1098.38, 1961.03)
 
-[node name="Polygon2D2" type="Polygon2D" parent="."]
+[node name="Polygon2D2" type="Polygon2D" parent="head"]
 modulate = Color(0.509286, 0.509286, 0.509286, 1)
 position = Vector2(-65, -276)
 offset = Vector2(-1257, -1894)
@@ -35,7 +37,7 @@ texture = ExtResource("1_fqrr0")
 polygon = PackedVector2Array(1321, 1748, 1167, 1986, 1310, 2062, 1326.32, 2050.23)
 uv = PackedVector2Array(1256.29, 1681.92, 1105.85, 1946.48, 1248.51, 2068.39, 1326.32, 2050.23)
 
-[node name="Polygon2D5" type="Polygon2D" parent="."]
+[node name="Polygon2D5" type="Polygon2D" parent="head"]
 modulate = Color(0.577008, 0.577008, 0.577008, 1)
 position = Vector2(-19, -241)
 rotation = 1.48416
