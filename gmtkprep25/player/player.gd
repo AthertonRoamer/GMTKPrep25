@@ -164,8 +164,8 @@ func get_input() -> void:
 			walk_left()
 		if Input.is_action_pressed("walk_right"):
 			walk_right()
-     if Input.is_action_just_pressed("dash"):
-		 dash()
+		if Input.is_action_just_pressed("dash"):
+			dash()
 	if controller_input:
 		if Input.get_joy_axis(device_id, JOY_AXIS_LEFT_X) > 0.2:
 			walk_right()
