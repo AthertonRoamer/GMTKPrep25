@@ -108,11 +108,14 @@ func _physics_process(delta: float) -> void:
 		
 	
 	move_and_slide()
-	
+	handle_visuals()
 	#reset variables
 	jump_this_frame = false
 	walk_direction = 0
 	
+
+func handle_visuals():
+	pass
 	
 func walk_right() -> void:
 	walk_direction += 1
@@ -142,7 +145,10 @@ func quit_jumping() -> void:
 func can_jump() -> bool:
 	return is_on_floor()
 	
-	
+
+func dash():
+	pass
+
 func get_input() -> void:
 	if Input.is_action_just_pressed("jump"):
 		jump()
@@ -152,11 +158,24 @@ func get_input() -> void:
 		walk_left()
 	if Input.is_action_pressed("walk_right"):
 		walk_right()
+	if Input.is_action_just_pressed("dash"):
+		dash()
 	
+
+func spam():
+	pass
+
+func sig():
+	pass
+
+func special():
+	pass
+
+func block():
+	pass
 
 func take_damage(dmg : float) -> void:
 	health -= dmg
-	
-	
+
 func die() -> void:
 	queue_free()
