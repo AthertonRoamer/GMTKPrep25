@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func load_game() -> void:
 	map = map_scene.instantiate()
-	add_child(map)
+	$MapHolder.add_child(map)
 	$PlayerManager.spawn_points = map.get_spawn_points()
 	$PlayerManager.spawn_players()
 	$Camera2D.following_players = true

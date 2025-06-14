@@ -1,25 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://n723ru2gtx5i"]
 
 [ext_resource type="PackedScene" uid="uid://dor6iks60feuh" path="res://maps/platforms/platform_02.tscn" id="1_b71ab"]
-[ext_resource type="PackedScene" uid="uid://d4gheop4cx2fy" path="res://art/hammer.tscn" id="3_pwco0"]
+[ext_resource type="Script" uid="uid://b60ur2mhqmr8s" path="res://maps/map.gd" id="1_pwco0"]
 
 [sub_resource type="Environment" id="Environment_42yok"]
 background_mode = 3
 glow_enabled = true
 
 [node name="test_map" type="Node2D"]
+script = ExtResource("1_pwco0")
 
 [node name="Spawn1" type="Node2D" parent="."]
-position = Vector2(568, 201)
+position = Vector2(2384, 204)
 
 [node name="Spawn2" type="Node2D" parent="."]
 position = Vector2(280, 267)
 
 [node name="Spawn3" type="Node2D" parent="."]
-position = Vector2(1008, 412)
+position = Vector2(926, 416)
 
 [node name="Spawn4" type="Node2D" parent="."]
-position = Vector2(514, 406)
+position = Vector2(1860, 199)
 
 [node name="graphics" type="Node2D" parent="."]
 
@@ -27,10 +28,10 @@ position = Vector2(514, 406)
 environment = SubResource("Environment_42yok")
 
 [node name="background" type="ColorRect" parent="graphics"]
-offset_left = -16797.0
-offset_top = -8091.0
-offset_right = 20480.0
-offset_bottom = 15923.0
+offset_left = -16945.0
+offset_top = -8140.0
+offset_right = 20332.0
+offset_bottom = 15874.0
 color = Color(0.0295066, 0.0295066, 0.0295066, 1)
 
 [node name="Platform02" parent="." instance=ExtResource("1_b71ab")]
@@ -44,7 +45,3 @@ scale = Vector2(-0.259453, 0.248097)
 [node name="Platform04" parent="." instance=ExtResource("1_b71ab")]
 position = Vector2(2842, 433)
 scale = Vector2(-1.87502, 0.432347)
-
-[node name="hammer" parent="." instance=ExtResource("3_pwco0")]
-position = Vector2(172, -37)
-scale = Vector2(0.5, 0.5)
