@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://y2j76m7vng7a"]
+
+[ext_resource type="Texture2D" uid="uid://b4e11f4y0m10k" path="res://art/map_art.png" id="1_vnre4"]
+
+[node name="platform2" type="StaticBody2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(35, -56)
+offset = Vector2(-2262, -4359)
+texture = ExtResource("1_vnre4")
+polygon = PackedVector2Array(420.25, 3788.28, -44.5586, 4551.05, 1707.41, 5409.16, 4353.25, 5146.96, 5545.07, 4443.78, 5032.59, 3549.92)
+uv = PackedVector2Array(420.25, 3788.28, -44.5586, 4551.05, 1707.41, 5409.16, 4353.25, 5146.96, 5545.07, 4443.78, 5032.59, 3549.92)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1674, -520, -1768, -62, -1439, 267, -941, 449, 95, 550, 1757, 220, 1770, 173, 2504, -251, 2288, -533)

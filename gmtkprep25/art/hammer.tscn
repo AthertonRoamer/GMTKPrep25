@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://d4gheop4cx2fy"]
 
-[ext_resource type="Texture2D" uid="uid://c1d4mdvmxqvao" path="res://art/gmtk25_art2.png" id="1_63pn6"]
+[ext_resource type="Texture2D" uid="uid://b4e11f4y0m10k" path="res://art/map_art.png" id="1_63pn6"]
 [ext_resource type="Script" uid="uid://cgthdykad3xuq" path="res://art/hammer.gd" id="1_qx2d8"]
 
 [sub_resource type="Animation" id="Animation_j8yxk"]
