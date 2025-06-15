@@ -153,6 +153,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("shadow:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_g3ad5"]
 resource_name = "attack"
@@ -301,6 +313,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1, 1)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("shadow:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_nibeb"]
 resource_name = "dash"
@@ -423,7 +447,7 @@ tracks/9/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0392157)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -447,7 +471,19 @@ tracks/11/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0509804)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("shadow:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_e0uat"]
@@ -598,6 +634,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("shadow:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_x548p"]
 resource_name = "jump"
@@ -745,6 +793,18 @@ tracks/11/keys = {
 "transitions": PackedFloat32Array(),
 "update": 0,
 "values": []
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("shadow:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_pshf1"]
@@ -894,6 +954,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("shadow:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ytd5e"]
 _data = {
@@ -908,6 +980,18 @@ _data = {
 [node name="wizard" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_nqr4n")
+walk_max_speed = 300.0
+
+[node name="shadow" type="Polygon2D" parent="."]
+modulate = Color(1, 1, 1, 0.666667)
+position = Vector2(-2, 94)
+rotation = -1.52931
+scale = Vector2(1.47376, 0.935191)
+color = Color(0, 0, 0, 1)
+offset = Vector2(-1216, -1914)
+texture = ExtResource("2_x548p")
+polygon = PackedVector2Array(1233.5, 1778.23, 1195.92, 1919.34, 1250.59, 2094.12)
+uv = PackedVector2Array(1263.09, 1701.27, 1103.31, 1952.35, 1314.44, 2134.95)
 
 [node name="wizard_art" type="Node2D" parent="."]
 position = Vector2(6, 0)
@@ -1006,7 +1090,6 @@ polygon = PackedVector2Array(908.4, 1923.18, 852.113, 1951.44, 852.608, 2096.32)
 uv = PackedVector2Array(981.786, 1779.29, 788.686, 1983.02, 1111.11, 1988.34)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-1, -54)
 shape = SubResource("CapsuleShape2D_x548p")
 
@@ -1019,8 +1102,11 @@ libraries = {
 }
 
 [node name="dash_timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.35
 one_shot = true
+
+[node name="shadow_ray" type="RayCast2D" parent="."]
+target_position = Vector2(0, 1000)
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]

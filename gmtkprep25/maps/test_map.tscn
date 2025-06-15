@@ -1,14 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://n723ru2gtx5i"]
+[gd_scene load_steps=7 format=3 uid="uid://n723ru2gtx5i"]
 
 [ext_resource type="PackedScene" uid="uid://dor6iks60feuh" path="res://maps/platforms/platform_02.tscn" id="1_b71ab"]
 [ext_resource type="Script" uid="uid://b60ur2mhqmr8s" path="res://maps/map.gd" id="1_pwco0"]
+[ext_resource type="PackedScene" uid="uid://bo005g8fioy84" path="res://maps/platforms/platform_1.tscn" id="3_pwco0"]
+[ext_resource type="Texture2D" uid="uid://cx2g1hfl62bcr" path="res://icon.svg" id="4_42yok"]
 
 [sub_resource type="Environment" id="Environment_42yok"]
 background_mode = 3
 glow_enabled = true
+glow_bloom = 0.03
+glow_blend_mode = 0
 
-[node name="test_map" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_cabd0"]
+radius = 34.3657
+
+[node name="test_map" type="Node2D" node_paths=PackedStringArray("spawn_point_nodes")]
 script = ExtResource("1_pwco0")
+spawn_point_nodes = [NodePath("Spawn1"), NodePath("Spawn2"), NodePath("Spawn3"), NodePath("Spawn4")]
 
 [node name="Spawn1" type="Node2D" parent="."]
 position = Vector2(2384, 204)
@@ -45,3 +53,18 @@ scale = Vector2(-0.259453, 0.248097)
 [node name="Platform04" parent="." instance=ExtResource("1_b71ab")]
 position = Vector2(2842, 433)
 scale = Vector2(-1.87502, 0.432347)
+
+[node name="platform1" parent="." instance=ExtResource("3_pwco0")]
+position = Vector2(806, 1123)
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(368, 296)
+shape = SubResource("CircleShape2D_cabd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(368, 296.5)
+scale = Vector2(0.53125, 0.539062)
+texture = ExtResource("4_42yok")

@@ -12,5 +12,4 @@ polygon = PackedVector2Array(2437.34, 130.518, 2189.67, 443.895, 2422.18, 863.41
 uv = PackedVector2Array(2437.34, 130.518, 2189.67, 443.895, 2422.18, 863.417, 2811.37, 969.561, 3994.12, 216.444)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-polygon = PackedVector2Array(-365, -259, 947, -248, 964, -214, -58, 401, -379, 269, -555, -48)
+polygon = PackedVector2Array(-444, -171, 946, -237, 961, -207, -58, 401, -379, 269, -491, -42)
