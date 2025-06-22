@@ -1,47 +1,108 @@
-[gd_scene load_steps=4 format=3 uid="uid://n723ru2gtx5i"]
+[gd_scene load_steps=8 format=3 uid="uid://n723ru2gtx5i"]
 
 [ext_resource type="PackedScene" uid="uid://dor6iks60feuh" path="res://maps/platforms/platform_02.tscn" id="1_b71ab"]
 [ext_resource type="Script" uid="uid://b60ur2mhqmr8s" path="res://maps/map.gd" id="1_pwco0"]
+[ext_resource type="PackedScene" uid="uid://bo005g8fioy84" path="res://maps/platforms/platform_1.tscn" id="3_pwco0"]
+[ext_resource type="Texture2D" uid="uid://c1d4mdvmxqvao" path="res://art/gmtk25_art2.png" id="4_42yok"]
 
 [sub_resource type="Environment" id="Environment_42yok"]
 background_mode = 3
 glow_enabled = true
+glow_bloom = 0.03
+glow_blend_mode = 0
 
-[node name="test_map" type="Node2D"]
+[sub_resource type="Gradient" id="Gradient_pwco0"]
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.709756, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.0317778, 0.0316758, 0.0677958, 1, 0.120886, 0.120651, 0.195209, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_42yok"]
+gradient = SubResource("Gradient_pwco0")
+fill_from = Vector2(0.555556, 0.235043)
+fill_to = Vector2(0.222222, 0.679487)
+
+[node name="test_map" type="Node2D" node_paths=PackedStringArray("spawn_point_nodes")]
 script = ExtResource("1_pwco0")
+spawn_point_nodes = [NodePath("spawns/Spawn1"), NodePath("spawns/Spawn2"), NodePath("spawns/Spawn3"), NodePath("spawns/Spawn4")]
 
-[node name="Spawn1" type="Node2D" parent="."]
-position = Vector2(2384, 204)
+[node name="spawns" type="Node2D" parent="."]
 
-[node name="Spawn2" type="Node2D" parent="."]
-position = Vector2(280, 267)
+[node name="Spawn1" type="Node2D" parent="spawns"]
+position = Vector2(2682, 557)
 
-[node name="Spawn3" type="Node2D" parent="."]
-position = Vector2(926, 416)
+[node name="Spawn2" type="Node2D" parent="spawns"]
+position = Vector2(91, 60)
 
-[node name="Spawn4" type="Node2D" parent="."]
-position = Vector2(1860, 199)
+[node name="Spawn3" type="Node2D" parent="spawns"]
+position = Vector2(1344, 218)
+
+[node name="Spawn4" type="Node2D" parent="spawns"]
+position = Vector2(-157, 681)
 
 [node name="graphics" type="Node2D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="graphics"]
 environment = SubResource("Environment_42yok")
 
-[node name="background" type="ColorRect" parent="graphics"]
-offset_left = -16945.0
-offset_top = -8140.0
-offset_right = 20332.0
-offset_bottom = 15874.0
-color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+[node name="background" type="Sprite2D" parent="graphics"]
+position = Vector2(917.499, 248.5)
+scale = Vector2(223.672, 72.3281)
+texture = SubResource("GradientTexture2D_42yok")
 
-[node name="Platform02" parent="." instance=ExtResource("1_b71ab")]
-position = Vector2(129, 411)
-scale = Vector2(0.380546, 0.248097)
+[node name="platforms" type="Node2D" parent="."]
 
-[node name="Platform03" parent="." instance=ExtResource("1_b71ab")]
-position = Vector2(932, 540)
-scale = Vector2(-0.259453, 0.248097)
+[node name="Platform03" parent="platforms" instance=ExtResource("1_b71ab")]
+position = Vector2(2688, 694)
+rotation = 3.14159
+scale = Vector2(0.099453, -0.110056)
 
-[node name="Platform04" parent="." instance=ExtResource("1_b71ab")]
-position = Vector2(2842, 433)
-scale = Vector2(-1.87502, 0.432347)
+[node name="Platform05" parent="platforms" instance=ExtResource("1_b71ab")]
+position = Vector2(-314, 397)
+rotation = 3.06552
+scale = Vector2(-0.204501, -0.115922)
+
+[node name="Platform07" parent="platforms" instance=ExtResource("1_b71ab")]
+position = Vector2(1333, 344)
+rotation = 3.14159
+scale = Vector2(-0.140705, -0.119028)
+
+[node name="Platform06" parent="platforms" instance=ExtResource("1_b71ab")]
+position = Vector2(-599, 616)
+rotation = 3.14159
+scale = Vector2(0.099453, -0.110056)
+
+[node name="Platform04" parent="platforms" instance=ExtResource("1_b71ab")]
+position = Vector2(2225, 490)
+rotation = 3.14159
+scale = Vector2(0.614497, -0.175493)
+
+[node name="platform1" parent="platforms" instance=ExtResource("3_pwco0")]
+modulate = Color(0.851769, 0.851769, 0.851769, 1)
+position = Vector2(806, 1123)
+scale = Vector2(0.8, 0.8)
+
+[node name="platform2" parent="platforms" instance=ExtResource("3_pwco0")]
+modulate = Color(0.851769, 0.851769, 0.851769, 1)
+position = Vector2(581, 246)
+scale = Vector2(-0.269217, 0.212745)
+
+[node name="platform3" parent="platforms" instance=ExtResource("3_pwco0")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(1378, 2282)
+scale = Vector2(-1.5516, 0.301664)
+
+[node name="shadow" type="Polygon2D" parent="platforms"]
+modulate = Color(1, 1, 1, 0.666667)
+position = Vector2(-278, 923)
+rotation = -1.52931
+scale = Vector2(1.36672, 0.730571)
+color = Color(0, 0, 0, 1)
+offset = Vector2(-1216, -1914)
+texture = ExtResource("4_42yok")
+polygon = PackedVector2Array(1255.89, 1698.56, 1204.94, 2009.39, 1278.1, 2765.41)
+uv = PackedVector2Array(1263.09, 1701.27, 1103.31, 1952.35, 1314.44, 2134.95)
+
+[node name="Platform02" parent="platforms" instance=ExtResource("1_b71ab")]
+position = Vector2(-154, 835)
+rotation = 0.122703
+scale = Vector2(0.443146, 0.205782)

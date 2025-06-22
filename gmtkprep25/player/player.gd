@@ -85,6 +85,7 @@ func _physics_process(delta: float) -> void:
 	if dash_this_frame:
 		dash_this_frame = false
 		process_dash()
+		
 	
 	#apply friction
 	if walk_direction == 0:
@@ -119,10 +120,14 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 	handle_visuals()
+	handle_shadow()
 	#reset variables
 	jump_this_frame = false
 	walk_direction = 0
 	
+
+func handle_shadow():
+	pass
 
 func handle_visuals():
 	pass
@@ -158,8 +163,8 @@ func can_jump() -> bool:
 
 func dash():
 	dash_this_frame = true
-	
-	
+
+
 func process_dash() -> void:
 	pass
 
@@ -191,6 +196,10 @@ func _input(event : InputEvent) -> void:
 			quit_jumping()
 		if event.is_action_pressed("dash"):
 			dash()
+		if event.is_action_released("dash"):
+			block_ended()
+
+
 
 	
 
@@ -203,7 +212,7 @@ func sig():
 func special():
 	pass
 
-func block():
+func block_ended():
 	pass
 
 func take_damage(dmg : float) -> void:

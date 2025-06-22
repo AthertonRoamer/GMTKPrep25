@@ -5,7 +5,7 @@ extends Camera2D
 var default_position : Vector2
 var following_players : bool = false
 var ideal_zoom_factor : float = 1
-var zoom_speed : float = 0.5 #per sec
+var zoom_speed : float = 2 #per sec
 var player_seperation_to_window_factor : float = .5
 
 func _ready() -> void:

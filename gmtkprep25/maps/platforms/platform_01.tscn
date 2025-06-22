@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cumqqkee8lgow"]
 
-[ext_resource type="Texture2D" uid="uid://ckhkrt180he6v" path="res://art/gmtk25_art.png" id="1_5xrkt"]
+[ext_resource type="Texture2D" uid="uid://ckhkrt180he6v" path="res://art/old.png" id="1_5xrkt"]
 
 [node name="platform_01" type="StaticBody2D"]
 

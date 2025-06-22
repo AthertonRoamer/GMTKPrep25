@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cghp3n1ob8rh" path="res://game/camera_2d.gd" id="4_4fuuu"]
 [ext_resource type="PackedScene" uid="uid://bv7mmxv5oflqa" path="res://player/wizard/wizard.tscn" id="4_u5opy"]
 [ext_resource type="Texture2D" uid="uid://cx2g1hfl62bcr" path="res://icon.svg" id="5_dxrkv"]
-[ext_resource type="PackedScene" uid="uid://d4gheop4cx2fy" path="res://art/hammer.tscn" id="5_y36n6"]
+[ext_resource type="PackedScene" uid="uid://d4gheop4cx2fy" path="res://player/hammer_wielder/hammer_wielder.tscn" id="5_y36n6"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_l1rk1")
