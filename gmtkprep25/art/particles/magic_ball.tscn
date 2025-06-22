@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8d8jdsbvw4m5"]
+[gd_scene load_steps=8 format=3 uid="uid://b8d8jdsbvw4m5"]
 
 [ext_resource type="Texture2D" uid="uid://c1d4mdvmxqvao" path="res://art/gmtk25_art2.png" id="1_0j7kl"]
 
@@ -6,8 +6,15 @@
 atlas = ExtResource("1_0j7kl")
 region = Rect2(622.507, 1478.16, 684.706, 568.051)
 
+[sub_resource type="Curve" id="Curve_0j7kl"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.966837, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_n5rp2"]
+curve = SubResource("Curve_0j7kl")
+
 [sub_resource type="Curve" id="Curve_oxuyq"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.729592, 0.993596), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0.231527), 0.0, 0.0, 0, 0, Vector2(0.436224, 0.244335), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_f7ia0"]
@@ -19,10 +26,12 @@ angle_min = -720.0
 angle_max = 720.0
 direction = Vector3(0, 0, 0)
 spread = 180.0
-initial_velocity_min = 137.21
-initial_velocity_max = 137.21
+initial_velocity_max = 55.81
 gravity = Vector3(0, 0, 0)
+scale_min = 0.0
+scale_max = 0.5
 scale_curve = SubResource("CurveTexture_f7ia0")
+emission_curve = SubResource("CurveTexture_n5rp2")
 
 [node name="magic_ball" type="GPUParticles2D"]
 amount = 28

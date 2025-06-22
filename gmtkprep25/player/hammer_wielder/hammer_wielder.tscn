@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://d4gheop4cx2fy"]
 
 [ext_resource type="Texture2D" uid="uid://c1d4mdvmxqvao" path="res://art/gmtk25_art2.png" id="1_63pn6"]
-[ext_resource type="Script" uid="uid://cgthdykad3xuq" path="res://art/hammer.gd" id="1_qx2d8"]
+[ext_resource type="Script" uid="uid://cgthdykad3xuq" path="res://player/hammer_wielder/hammer_wielder.gd" id="1_qx2d8"]
 
 [sub_resource type="Animation" id="Animation_j8yxk"]
 length = 0.001
@@ -804,6 +804,7 @@ height = 334.0
 [node name="hammer" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_qx2d8")
+keyboard_input = true
 
 [node name="shadow" type="Polygon2D" parent="."]
 modulate = Color(1, 1, 1, 0.819608)
