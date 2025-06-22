@@ -18,8 +18,8 @@ colors = PackedColorArray(0, 0, 0, 1, 0.0317778, 0.0316758, 0.0677958, 1, 0.1208
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_42yok"]
 gradient = SubResource("Gradient_pwco0")
-fill_from = Vector2(0.555556, 0.235043)
-fill_to = Vector2(0.222222, 0.679487)
+fill_from = Vector2(0.529915, 0.303419)
+fill_to = Vector2(0.350427, 0.628205)
 
 [node name="test_map" type="Node2D" node_paths=PackedStringArray("spawn_point_nodes")]
 script = ExtResource("1_pwco0")
@@ -88,7 +88,7 @@ scale = Vector2(-0.269217, 0.212745)
 
 [node name="platform3" parent="platforms" instance=ExtResource("3_pwco0")]
 modulate = Color(1, 0, 0, 1)
-position = Vector2(1378, 2282)
+position = Vector2(1171, 3011)
 scale = Vector2(-1.5516, 0.301664)
 
 [node name="shadow" type="Polygon2D" parent="platforms"]

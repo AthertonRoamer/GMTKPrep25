@@ -4,7 +4,7 @@ extends Player
 @onready var shadow_art_scale = $shadow.scale.x
 @onready var anim_p = $AnimationPlayer
 
-@export var dash_power = 1300
+@export var dash_power = 1000
 var dash_direction
 
 
