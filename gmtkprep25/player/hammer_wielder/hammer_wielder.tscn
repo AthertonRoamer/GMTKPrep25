@@ -804,7 +804,9 @@ height = 334.0
 [node name="hammer" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_qx2d8")
+
 controller_input = false
+
 
 [node name="shadow" type="Polygon2D" parent="."]
 modulate = Color(1, 1, 1, 0.819608)
