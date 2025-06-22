@@ -10,3 +10,5 @@ func _ready() -> void:
 func open_menu() -> void:
 	menu = menu_scene.instantiate()
 	add_child(menu)
+	
+	

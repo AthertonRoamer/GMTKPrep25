@@ -57,20 +57,20 @@ func _ready() -> void:
 	if set_ground_friction_from_slow_down_time:
 		#250 px/sec 250 px/sec / 1 sec = 250 px / sec /sec
 		ground_friction = walk_max_speed / ground_slow_down_time
-		print("ground friction: ", ground_friction)
+		#print("ground friction: ", ground_friction)
 	if set_air_friction_from_slow_down_time:
 		air_friction = walk_max_speed / air_slow_down_time
-		print("air friction: ", air_friction)
+		#print("air friction: ", air_friction)
 	if set_walk_accel_from_time:
 		walk_accel = walk_max_speed / walk_accel_time
-		print("walk accel ", walk_accel)
+		#print("walk accel ", walk_accel)
 	#set jump time from jump height and jump speed
 	#px / (px/sec) = sec
 	if set_max_jump_time_from_max_jump_height:
 		var float_time : float = dynamic_jump_speed / gravity_accel
 		var float_distance : float = float_time * dynamic_jump_speed / 2
 		max_jump_time = (max_jump_height - float_distance) / dynamic_jump_speed
-		print("jump time: ", max_jump_time)
+		#print("jump time: ", max_jump_time)
 
 
 func _physics_process(delta: float) -> void:
@@ -166,15 +166,15 @@ func process_dash() -> void:
 func get_input() -> void:
 
 	if keyboard_input:
-		if Input.is_action_just_pressed("jump"):
+		if Input.is_action_just_pressed("key_jump"):
 			jump()
-		if Input.is_action_just_released("jump"):
+		if Input.is_action_just_released("key_jump"):
 			quit_jumping()
 		if Input.is_action_pressed("walk_left"):
 			walk_left()
 		if Input.is_action_pressed("walk_right"):
 			walk_right()
-		if Input.is_action_just_pressed("dash"):
+		if Input.is_action_just_pressed("key_dash"):
 			dash()
 	if controller_input:
 		if Input.get_joy_axis(device_id, JOY_AXIS_LEFT_X) > 0.2:
@@ -191,7 +191,6 @@ func _input(event : InputEvent) -> void:
 			quit_jumping()
 		if event.is_action_pressed("dash"):
 			dash()
-
 	
 
 func spam():
