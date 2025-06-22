@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c1d4mdvmxqvao" path="res://art/gmtk25_art2.png" id="1_fdeh4"]
 
 [node name="Platform02" type="StaticBody2D"]
+rotation = 0.0996869
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2(-1, 1)
@@ -13,4 +14,4 @@ uv = PackedVector2Array(2437.34, 130.518, 2189.67, 443.895, 2422.18, 863.417, 28
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
-polygon = PackedVector2Array(-365, -259, 947, -248, 964, -214, -58, 401, -379, 269, -555, -48)
+polygon = PackedVector2Array(-553, -49, 948, -240, 950, -202, -58, 401, -373, 264)

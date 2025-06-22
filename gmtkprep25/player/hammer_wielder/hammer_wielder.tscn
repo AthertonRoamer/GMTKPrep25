@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://d4gheop4cx2fy"]
 
 [ext_resource type="Texture2D" uid="uid://c1d4mdvmxqvao" path="res://art/gmtk25_art2.png" id="1_63pn6"]
-[ext_resource type="Script" uid="uid://cgthdykad3xuq" path="res://art/hammer.gd" id="1_qx2d8"]
+[ext_resource type="Script" uid="uid://cgthdykad3xuq" path="res://player/hammer_wielder/hammer_wielder.gd" id="1_qx2d8"]
 
 [sub_resource type="Animation" id="Animation_j8yxk"]
 length = 0.001
@@ -276,7 +276,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(-2, -6)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -300,7 +300,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1.16)]
+"values": [Vector2(1, 1), Vector2(1, 1.08)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -799,11 +799,23 @@ _data = {
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qx2d8"]
 radius = 73.0
-height = 312.0
+height = 334.0
 
 [node name="hammer" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_qx2d8")
+keyboard_input = true
+
+[node name="shadow" type="Polygon2D" parent="."]
+modulate = Color(1, 1, 1, 0.819608)
+position = Vector2(-26, 142)
+rotation = -1.52931
+scale = Vector2(1.47376, 0.935191)
+color = Color(0, 0, 0, 1)
+offset = Vector2(-1216, -1914)
+texture = ExtResource("1_63pn6")
+polygon = PackedVector2Array(1241.16, 1734.7, 1178.09, 1918.62, 1259.14, 2159.47)
+uv = PackedVector2Array(1263.09, 1701.27, 1103.31, 1952.35, 1314.44, 2134.95)
 
 [node name="hammer_art" type="Node2D" parent="."]
 
@@ -932,7 +944,10 @@ position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-23, -41)
+position = Vector2(-22, -36)
 shape = SubResource("CapsuleShape2D_qx2d8")
+
+[node name="shadow_ray" type="RayCast2D" parent="."]
+target_position = Vector2(0, 1000)
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
